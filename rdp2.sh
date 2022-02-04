@@ -35,7 +35,7 @@ sudo mkdir /mediabots /floppy /virtio
 link1_status=$(curl -Is https://dl.dropbox.com/s/ia1k45bdwdiuip6/Win10Pro.iso | grep HTTP | cut -f2 -d" ")
 #sudo wget -P /mediabots https://archive.org/download/WS2012R2/WS2012R2.ISO # Windows Server 2012 R2 
 if [ $link1_status = "200" ] ; then 
-	sudo wget -O /mediabots/WS2012R2.ISO https://dl.dropbox.com/s/ia1k45bdwdiuip6/Win10Pro.iso
+	sudo wget -O /mediabots/win10pro.iso https://dl.dropbox.com/s/ia1k45bdwdiuip6/Win10Pro.iso
 elif [ $link2_status = "200" -o $link2_status = "301" -o $link2_status = "302" ] ; then 
 	sudo wget -P /mediabots https://ia601506.us.archive.org/4/items/WS2012R2/WS2012R2.ISO
 else
